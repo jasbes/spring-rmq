@@ -11,8 +11,14 @@
     <groupId>com.rmq</groupId>
     <artifactId>spring-rmq</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>spring-rmq</name>
     <description>spring-rmq</description>
+    <modules>
+        <module>rmq-api</module>
+        <module>rmq-listener</module>
+        <module>rmq-producer</module>
+    </modules>
     <properties>
         <java.version>22</java.version>
     </properties>
@@ -48,22 +54,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
